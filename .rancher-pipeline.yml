@@ -1,0 +1,25 @@
+stages:
+- name: Deploy--DB
+  steps:
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:iii-dev-charts3-db
+      version: 0.3.1
+      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
+      targetNamespace: ${CICD_GIT_REPO_NAME}
+      answers:
+        db.type: mongodb
+        # Always true in this time
+        db.gui: true
+        db.username: iiidevops
+        db.password: templatePassword
+        db.name: todo
+        db.tag: 4.4-debian-10
+        # Common project info
+        git.url: ${CICD_GIT_URL}
+        git.repoName: ${CICD_GIT_REPO_NAME}
+        git.branch: ${CICD_GIT_BRANCH}
+        git.commitID: ${CICD_GIT_COMMIT}
+    when:
+      branch:
+        include:
+          - master
