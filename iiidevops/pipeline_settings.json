@@ -1,6 +1,6 @@
 {
   "name": "MongoDB 4.4 (Dev)",
-  "description": "Mongodb 4.4-debian-10 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/mongodb-dev/blob/master/README.md' target='_blank'>mongodb部屬注意事項</a>",
+  "description": "Mongodb 4.4-debian-10 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/mongodb-dev/blob/master/README.md' target='_blank'>mongodb部屬注意事項</a><hr size=1 /><b>v1.13.0</b>  <li>增加指定 harbor.host 功能",
   "arguments": [
     {
       "key": "db.username",
