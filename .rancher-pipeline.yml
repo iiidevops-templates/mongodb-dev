@@ -35,7 +35,7 @@ stages:
       catalogTemplate: cattle-global-data:iii-dev-charts3-db
       name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
       targetNamespace: ${CICD_GIT_REPO_NAME}
-      version: 0.3.6
+      version: 0.3.7
   when:
     branch:
       include:
